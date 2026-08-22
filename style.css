@@ -1,28 +1,55 @@
-/* Add a black background color to the top navigation */
+body{
+background-color: #444444;
+}
 .topnav {
   background-color: #444444;
   overflow: hidden;
+
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1% 11%;
+  font-size: 110%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-decoration: none;
-  font-size: 17px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+    border: 1px solid white ;
+    border-radius: 10px;
+}
+.topnav a.active {
+    border: 1px solid white ;
+    border-radius: 10px;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+.Musicbuttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 12px 12px;
+  margin-top: 10px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.Musicbuttons img {
+  width: 25%;
+  height: 10%;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.Musicbuttons p {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 125%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
