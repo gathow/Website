@@ -51,13 +51,67 @@ float: left;
   margin: 0;
   color: #f2f2f2;
   font-size: 125%;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.ChannelButton a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 24%;
+  padding: 12px 12px;
+  margin-top: 10px;
+  margin-right: 50%;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.ChannelButton img {
+  width: 25%;
+  height: 10%;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.ChannelButton p {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 125%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.VideoButton a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+  padding: 12px 12px;
+  margin-top: 10px;
+  margin-right: 50%;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.VideoButton img {
+  width: 25%;
+  height: 10%;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.VideoButton p {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 125%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .me {
 display: inline-flex;
-
 }
 .me img{
 margin-left: 1%;
