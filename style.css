@@ -110,6 +110,45 @@ float: left;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+.GitRepo {
+  position: fixed;
+  right: 1%;
+  bottom:3%;
+  width: 20%;
+  z-index: 1000;
+}
+
+.GitRepo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+
+}
+
+.GitRepo img {
+  width: 25%;
+  height: 25%;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+
+}
+
+.GitRepo p {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+
 .me {
 display: inline-flex;
 }
