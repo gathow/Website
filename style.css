@@ -1,18 +1,49 @@
 #background {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
 
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  color: white;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
+#apod {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+}
+
+#explanation {
+  line-height: 1.6;
+}
+
+#explanation a {
+  color: #8ecbff;
+}
+
+#explanation a:hover {
+  color: white;
+}
 .topnav {
   background-color: #444444;
   overflow: hidden;
