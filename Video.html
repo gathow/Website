@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css?v=0.3">
-<link rel="icon" type="image/x-icon" href="ytlogo.png">
 <html>
 <head>
-<title>Gathows Music</title>
+  <link rel="stylesheet" href="style.css?v=0.3">
+  <link rel="icon" type="image/x-icon" href="ytlogo.png">
+  <title>Gathows Music</title>
 </head>
 
-<script>
+<body id="home">
+  <div id="background"></div>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="Essays.html">Essays</a>
+    <a class="active" href="Music.html">Music</a>
+    <a href="Video.html">Videos</a>
+  </div>
+
+  <div class="ChannelButton">
+    <a href="https://www.youtube.com/channel/UCaY25Zt6J1hiUo6v0WalOZQ">
+      <img src="ytlogo.png" alt="YouTube logo">
+      <p>Gathmeister-<br>My YouTube channel</p>
+    </a>
+  </div>
+
+  <div class="VideoButton">
+    <a href="index.html">
+      <img src="ytlogo.png" alt="YouTube logo">
+      <p>Coming soon!<br>My top 5 albums of 2026</p>
+    </a>
+  </div>
+
+  <script>
     async function loadBackground() {
       try {
         const response = await fetch(
@@ -20,13 +44,12 @@
         const data = await response.json();
         const apod = data[0];
 
-        if (apod.media_type !== "image") {
+        if (!apod || apod.media_type !== "image") {
           console.log("Today's APOD is not an image.");
           return;
         }
 
         const imageUrl = apod.hdurl || apod.url;
-
         document.querySelector("#background").style.backgroundImage =
           `url("${imageUrl}")`;
       } catch (error) {
@@ -36,28 +59,5 @@
 
     loadBackground();
   </script>
-    
-<body id= "home">
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="Essays.html">Essays</a>
-      <a href="Music.html">Music</a>
-      <a class="active" href="Video.html">Videos</a>
-    </div>
-
-    <div class="ChannelButton">
-    <a href="https://www.youtube.com/channel/UCaY25Zt6J1hiUo6v0WalOZQ">
-    <img src="ytlogo.png" alt="Picture of me">
-    <p> Gathmeister-<br>My youtube channel</p>
-    </a>
-    </div>
-
-    <div class="VideoButton">
-    <a href="index.html">
-    <img src="ytlogo.png" alt="Picture of me">
-    <p> Coming soon !-<br>My top 5 albums of 2026</p>
-    </a>
-    </div>
 </body>
-
 </html>
