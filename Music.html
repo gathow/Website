@@ -6,6 +6,13 @@
 <title>Gathows Music</title>
 </head>
 
+<body id= "home">
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="Essays.html">Essays</a>
+      <a class="active" href="Music.html">Music</a>
+      <a href="Video.html">Videos</a>
+    </div>
 <script>
     async function loadBackground() {
       try {
@@ -20,13 +27,12 @@
         const data = await response.json();
         const apod = data[0];
 
-        if (apod.media_type !== "image") {
+        if (!apod || apod.media_type !== "image") {
           console.log("Today's APOD is not an image.");
           return;
         }
 
         const imageUrl = apod.hdurl || apod.url;
-
         document.querySelector("#background").style.backgroundImage =
           `url("${imageUrl}")`;
       } catch (error) {
@@ -36,15 +42,6 @@
 
     loadBackground();
   </script>
-    
-<body id= "home">
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="Essays.html">Essays</a>
-      <a class="active" href="Music.html">Music</a>
-      <a href="Video.html">Videos</a>
-    </div>
-
     <div class="Musicbuttons">
     <a href="https://open.spotify.com/album/7MaMQIpQGO8xTvF1SKYijG?si=8lOg2fNZRomzckT4w2UPDA">
     <img src="aintnoasda.png" alt="Awesome song">
